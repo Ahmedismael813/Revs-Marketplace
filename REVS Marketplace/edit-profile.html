@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Marketplace</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Styling for the edit profile container */
+        .edit-profile-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .edit-profile-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the form */
+        form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Styling for the save button */
+        .save-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the back to profile link */
+        .profile-link {
+            font-size: 14px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" value="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" value="New York, USA" required>
+            </div>
+            <!-- Add more profile fields as needed -->
+            <button type="submit" class="save-button">Save Changes</button>
+        </form>
+        <p>Back to <a class="profile-link" href="profile.html">Profile Page</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - REVS Marketplace</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Styling for the login container */
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the form */
+        form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Styling for the login button */
+        .login-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+            text-align: center;
+        }
+
+        /* Styling for the registration page link */
+        .registration-link {
+            font-size: 14px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .registration-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for the home page link */
+        .home-link {
+            font-size: 14px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="home.html" method="post">
+            <div class="form-group">
+                <label for="username">Username or Email:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <p>Don't have an account? <a class="registration-link" href="registration.html">Register</a></p>
+        <p>Just want to view the <a class="home-link" href="home.html">Home Page?</a></p>
+    </div>
+</body>
+</html>
