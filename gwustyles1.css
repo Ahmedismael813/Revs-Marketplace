@@ -1,11 +1,11 @@
 body {
-    background: linear-gradient(to right, #d8bc33, #313BC3);
+    background-color: rgb(0,51,84);
     color: #fff;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #7048e8; 
+    background-color: rgb(0,51,84);
     padding: 10px 0;
 }
 
@@ -28,7 +28,7 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(249,231,183);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,7 +54,7 @@ select {
 }
 
 button {
-    background-color: #7048e8;
+    
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -68,18 +68,14 @@ footer {
 
 
 .about-container {
-    background-color: #fff; 
+    background-color: rgb(0,51,84);
     padding: 20px; 
     border-radius: 5px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     max-width: 800px; 
     margin: 20px auto; 
     text-align: left; 
-    color: #000; }
-
-.about-container h2 {
-    color: #7048e8; 
-}
+    color: #fff; }
 
 
 .sell-form {
@@ -94,7 +90,7 @@ footer {
 }
 
 .sell-form h2 {
-    color: #7048e8;
+    background-color: #fff; 
 }
 
 .sell-form label {
@@ -116,7 +112,7 @@ footer {
 }
 
 .sell-form button {
-    background-color: #7048e8;
+    background-color: rgb(0,51,84); 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -139,7 +135,7 @@ footer {
 }
 
 .buy-filter h2 {
-    color: #7048e8; 
+    background-color: #fff; 
 }
 
 .search-bar {
@@ -156,7 +152,7 @@ footer {
 }
 
 #search-button {
-    background-color: #7048e8;
+    background-color: rgb(0,51,84); 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -165,6 +161,7 @@ footer {
 }
 
 .trending-items {
+    color: rgb(0,51,84);
     margin-top: 20px;
 }
 
@@ -188,13 +185,13 @@ footer {
 }
 
 .item-card h3 {
-    color: #7048e8; 
+    background-color: #fff;  
     margin-top: 10px;
 }
 
 
 .item-card h3 {
-    color: #7048e8; 
+    background-color: #fff;  
     margin-top: 10px;
 }
 
@@ -217,7 +214,7 @@ footer {
 }
 
 .filter-section button {
-    background-color: #7048e8;
+    background-color: rgb(0,51,84); 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -227,13 +224,13 @@ footer {
 
 
 body {
-    background-color: #7048e8; 
+    background-color: rgb(0,51,84); 
     color: #fff; 
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #7048e8; 
+    background-color: rgb(0,51,84); 
     padding: 10px 0;
 }
 
