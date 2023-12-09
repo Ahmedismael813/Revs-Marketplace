@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="gwustyles1.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #001f3f;
+            padding: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .buy-filter {
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        #search {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .filter-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .trending-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item-card {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .item-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gwuindex.html">Home</a></li>
+                <li><a href="sellgwu.html">Sell</a></li>
+                <li><a href="buygwu.html">Buy</a></li>
+                <li><a href="aboutgwu.html">About</a></li>
+                <li><a href="contact.html">Contact/FAQ</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="buy-filter">
+            <h2>Find Items</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search items...">
+                <button id="search-button" onclick="searchItems()">Search</button>
+            </div>
+            <div class="filter-section">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="books">Books</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="collectibles">Collectibles</option>
+                    <option value="sporting-goods">Sporting Goods</option>
+                    <option value="jewelry">Jewelry</option>
+                    <option value="art-and-crafts">Art and Crafts</option>
+                    <option value="automotive-parts">Automotive Parts</option>
+                    <option value="Services">Services</option>
+                    <option value="Events">Events</option>
+                </select>
+                <button id="filter-button" onclick="applyFilter()">Apply Filter</button>
+            </div>
+        </section>
+
+        <section class="trending-items" id="trending-items-container">
+            <div class="item-card services" onclick="showItemDetails('Mathematics Tutoring - Erin H', 'Major: Mathematics | Subjects: Calculus I and II (MATH 1231 and MATH 1232), Algebra, Discrete Math, Statistics', 'Wage: $14/hour')">
+                <img src="tutor.png" alt="Tutoring in Mathematics">
+                <h3>Mathematics Tutoring - Erin H</h3>
+                <p>Major: Mathematics | Subjects: Calculus I and II (MATH 1231 and MATH 1232), Algebra, Discrete Math,
+                    Statistics</p>
+                <p>Wage: $14/hour</p>
+                <div class="contact-info">
+                    <p><strong>Contact Number:</strong> 812-721-5421</p>
+                    <p><strong>Student Name:</strong> Erin H</p>
+                    <p><strong>Meetup Location:</strong> Gelman Library</p>
+                </div>
+            </div>
+
+            <div class="item-card electronics" onclick="showItemDetails('Used TCL TV', '40 inch TV, great condition. 4K.', 'Price: $140')">
+                <img src="TCLTVUSED.PNG" alt="Trending Item 1">
+                <h3>Used TCL TV</h3>
+                <p>40 inch TV, great condition. 4K.</p>
+                <p>Price: $140</p>
+                <div class="contact-info">
+                    <p><strong>Contact Number:</strong> 716-321-9210</p>
+                    <p><strong>Student Name:</strong> Ahmed Ismael</p>
+                    <p><strong>Meetup Location:</strong> District House</p>
+                </div>
+            </div>
+
+            <div class="item-card electronics" onclick="showItemDetails('E-Scooter', '16 hours of battery life on a full charge. Good condition.', 'Price: $125')">
+                <img src="trending-item-2.jpg" alt="Trending Item 2">
+                <h3>E-Scooter</h3>
+                <p>16 hours of battery life on a full charge. Good condition.</p>
+                <div class="contact-info">
+                    <p><strong>Contact Number:</strong> 913-210-4312</p>
+                    <p><strong>Student Name:</strong> Ben Bosh</p>
+                    <p><strong>Meetup Location:</strong> Kogan Plaza</p>
+                </div>
+                <p>Price: $125</p>
+            </div>
+
+            <div class="item-card clothing" onclick="showItemDetails('Nike Dunk Low (Championship Court Purple)(BRAND NEW)', 'BRAND NEW Size: 9M DEADSTOCK', 'Price: $140')">
+                <img src="DunkShoes.png" alt="Trending Item 3">
+                <h3>Nike Dunk Low (Championship Court Purple)(BRAND NEW)</h3>
+                <p>BRAND NEW Size: 9M DEADSTOCK</p>
+                <div class="contact-info">
+                    <p><strong>Contact Number:</strong> 913-210-4312</p>
+                    <p><strong>Student Name:</strong> Alec Graham</p>
+                    <p><strong>Meetup Location:</strong> Kogan Plaza</p>
+                </div>
+                <p>Price: $140</p>
+            </div>
+
+            <div class="item-card books" onclick="showItemDetails('Genetics Textbook', 'Good condition. Really enjoyed learning about our genes!', 'Price: $55')">
+                <img src="textbook.png" alt="Trending Item 4">
+                <h3>Genetics Textbook</h3>
+                <p>Good condition. Really enjoyed learning about our genes!</p>
+                <p>Price: $55</p>
+                <div class="contact-info">
+                    <p><strong>Contact Number:</strong> 716-321-9210</p>
+                    <p><strong>Student Name:</strong> Lucia Silva </p>
+                    <p><strong>Meetup Location:</strong> University Student Center </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Revs Marketplace </p>
+    </footer>
+
+    <script>
+        function showItemDetails(title, description, price) {
+            alert('Item Details:\n\nTitle: ' + title + '\nDescription: ' + description + '\nPrice: ' + price);
+        }
+
+        function searchItems() {
+        }
+
+        function applyFilter() {
+        }
+    </script>
+</body>
+
+</html>

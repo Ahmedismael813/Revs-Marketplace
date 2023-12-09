@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create File Example</title>
+    <script src="script.js"></script>
+    <a href="gwuindex.html">Home</a>
+<a href="sellgwu.html">Sell</a>
+<a href="buygwu.html">Buy</a>
+<a href="aboutgwu.html">About</a>
+<a href="contact.html">Contact</a>
+<li><a href="login.html">Login</a></li>
+
+
+</head>
+<script src="script.js"></script>
+
+<body>
+    <button id="createFileButton">Create File</button>
+
+    <script>
+        function createAndDownloadFile() {
+            const fileContent = "This is the content of the file.";
+
+            const blob = new Blob([fileContent], { type: 'text/plain' });
+
+            const url = window.URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'example.txt'; 
+
+            a.click();
+
+            window.URL.revokeObjectURL(url);
+        }
+
+        const createFileButton = document.getElementById('createFileButton');
+        createFileButton.addEventListener('click', createAndDownloadFile);
+    </script>
+</body>
+</html>
+
+

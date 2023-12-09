@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginpage.css">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gwuindex.html">Home</a></li>
+                <li><a href="sellgwu.html">Sell</a></li>
+                <li><a href="buygwu.html">Buy</a></li>
+                <li><a href="aboutgwu.html">About</a></li>
+                <li><a href="contact.html">Contact/FAQ</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="loginForm" onsubmit="return validateForm()">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+        <p class="error" id="error-message"></p>
+        
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+        
+        <div class="register-here">
+            <p>New here? <a href="registergwu.html">Register here</a></p>
+        </div>
+    </form>
+
+    <p class="note">Note: Registration is allowed only with '@gwu.edu' email addresses.</p>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+
+            if (email.endsWith('@gwu.edu')) {
+                document.getElementById('error-message').innerHTML = '';
+                return true;
+            } else {
+                document.getElementById('error-message').innerHTML = 'Only GWU email addresses are allowed.';
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>

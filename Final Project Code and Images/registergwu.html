@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gwustyles1.css">
+    <script src="script.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gwuindex.html">Home</a></li>
+                <li><a href="sellgwu.html">Sell</a></li>
+                <li><a href="buygwu.html">Buy</a></li>
+                <li><a href="aboutgwu.html">About</a></li>
+                <li><a href="contact.html">Contact/FAQ</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="registrationForm" onsubmit="return validateRegistrationForm()">
+        <h2>Register</h2>
+        <label for="email">Email (@gwu.edu):</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="gwid">GWID (optional):</label>
+        <input type="text" id="gwid" name="gwid">
+
+        <label for="studentStatus">Student Status:</label>
+        <select id="studentStatus" name="studentStatus">
+            <option value="student">Student</option>
+            <option value="graduateStudent">Graduate Student</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+        <p class="error" id="error-message"></p>
+    </form>
+
+    <p class="note" style="text-align: center;">
+        Note: Registration is allowed only with '@gwu.edu' email addresses.
+    </p>
+
+    <script>
+        function validateRegistrationForm() {
+            var email = document.getElementById('email').value;
+
+            if (email.endsWith('@gwu.edu')) {
+                document.getElementById('error-message').innerHTML = '';
+                return true;
+            } else {
+                document.getElementById('error-message').innerHTML = 'Only GWU email addresses are allowed.';
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
